@@ -1,5 +1,5 @@
 import { Random } from '@woowacourse/mission-utils';
-import { DIGIT, RANGE } from './constants/randomNumber.js';
+import { DIGIT, RANGE } from '../constants/randomNumber.js';
 
 function generateUniqueRandomNumber() {
   const numbers = [];

@@ -1,5 +1,5 @@
 import InputView from '../View/InputView.js';
-import generateUniqueRandomNumber from '../generateUniqueRandomNumber.js';
+import generateUniqueRandomNumber from '../utils/generateUniqueRandomNumber.js';
 
 class GameController {
   #computer;
