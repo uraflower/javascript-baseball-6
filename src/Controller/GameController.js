@@ -1,4 +1,4 @@
-import InputView from '../View/InputView.js';
+import User from '../Domain/User.js';
 import generateUniqueRandomNumber from '../utils/generateUniqueRandomNumber.js';
 
 class GameController {
@@ -9,12 +9,7 @@ class GameController {
   async play() {
     this.#computer = generateUniqueRandomNumber();
 
-    await this.#setUserNumber();
-  }
-
-  async #setUserNumber() {
-    const numbers = await InputView.inputNumbers();
-    this.#user = [...numbers];
+    this.#user = User.getNumber();
   }
 }
 
