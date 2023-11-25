@@ -29,7 +29,7 @@
 
 ## 입력
 
-입력 시 `Console.readLineAsync`을 활용한다.
+입력 시 `Console.readLineAsync()`을 활용한다.
 
 ### 정답 입력 기능
 
@@ -59,7 +59,7 @@
 
 ## 출력
 
-출력 시 `Console.print`을 활용한다.
+출력 시 `Console.print()`을 활용한다.
 
 ### 게임 시작 메시지 출력
 
