@@ -7,12 +7,9 @@ class GameController {
   #user;
 
   async play() {
-    this.#setNumbers();
-  }
-
-  #setNumbers() {
     this.#computer = generateUniqueRandomNumber();
-    this.#user = this.#setUserNumber();
+
+    await this.#setUserNumber();
   }
 
   async #setUserNumber() {
