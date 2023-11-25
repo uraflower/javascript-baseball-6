@@ -1,5 +1,5 @@
 import { Console } from '@woowacourse/mission-utils';
-import INPUT from '../constants/messages/input';
+import INPUT from '../constants/messages/input.js';
 
 const InputView = {
   async inputNumbers() {
