@@ -1,14 +1,14 @@
-import generateUniqueRandomNumber from './generateUniqueRandomNumber.js';
+import GameController from './Controller/GameController.js';
 
 class App {
-  #computer;
+  #gameController;
 
   constructor() {
-    this.#computer = generateUniqueRandomNumber();
+    this.#gameController = new GameController();
   }
 
   async play() {
-    // ...
+    await this.#gameController.play();
   }
 }
 
