@@ -1,5 +1,8 @@
+import CustomError from '../Error/CustomError.js';
 import InputView from '../View/InputView.js';
+import ERROR from '../constants/messages/error.js';
 import tryUntilSuccess from '../utils/tryUntilSuccess.js';
+import isInvalidNumber from '../utils/validateNumber.js';
 
 const User = {
   async getNumber() {
@@ -7,7 +10,11 @@ const User = {
     return this.formatNumber(number);
   },
 
-  validate(number) {},
+  validate(number) {
+    if (isInvalidNumber(number)) {
+      throw new CustomError(ERROR.invalidNumber);
+    }
+  },
 
   formatNumber() {},
 };
