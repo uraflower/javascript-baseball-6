@@ -23,7 +23,6 @@ class GameController {
 
   async play() {
     this.#computer = generateUniqueRandomNumber();
-
     await this.#repeatGuess();
     OutputView.printEnd();
   }
