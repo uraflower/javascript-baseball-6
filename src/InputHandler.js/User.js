@@ -1,12 +1,13 @@
 import CustomError from '../Error/CustomError.js';
 import InputView from '../View/InputView.js';
 import ERROR from '../constants/messages/error.js';
+import { RANGE } from '../constants/randomNumber.js';
 import tryUntilSuccess from '../utils/tryUntilSuccess.js';
 import {
   isDuplicated,
   isInvalidLength,
   isNotInRange,
-} from '../utils/validateNumber.js';
+} from '../utils/validate.js';
 
 const User = {
   async getNumber() {
@@ -18,7 +19,7 @@ const User = {
     if (
       isDuplicated(number) ||
       isInvalidLength(number) ||
-      isNotInRange(number)
+      isNotInRange(number, RANGE.min, RANGE.max)
     ) {
       throw new CustomError(ERROR.invalidNumber);
     }
