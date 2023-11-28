@@ -1,9 +1,9 @@
-import User from '../InputHandler.js/User.js';
-import getHint from '../Domain/getHint.js';
+import User from '../InputHandler/User.js';
+import getHint from '../functions/getHint.js';
 import OutputView from '../View/outputView.js';
 import { DIGIT } from '../constants/randomNumber.js';
-import generateUniqueRandomNumber from '../utils/generateUniqueRandomNumber.js';
-import Restart from '../InputHandler.js/Restart.js';
+import generateUniqueRandomNumber from '../functions/generateUniqueRandomNumber.js';
+import Restart from '../InputHandler/Restart.js';
 import RESTART_FLAG from '../constants/restartFlag.js';
 
 class GameController {

@@ -2,13 +2,13 @@ import CustomError from '../Error/CustomError.js';
 import InputView from '../View/InputView.js';
 import ERROR from '../constants/messages/error.js';
 import { RANGE } from '../constants/randomNumber.js';
-import tryUntilSuccess from '../utils/tryUntilSuccess.js';
+import tryUntilSuccess from '../functions/tryUntilSuccess.js';
 import {
   isDuplicated,
   isInvalidLength,
   isNotInRange,
   isInteger,
-} from '../utils/validate.js';
+} from '../functions/validate.js';
 
 const User = {
   async getNumber() {

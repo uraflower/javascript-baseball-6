@@ -2,7 +2,7 @@ import CustomError from '../Error/CustomError.js';
 import InputView from '../View/InputView.js';
 import ERROR from '../constants/messages/error.js';
 import RESTART_FLAG from '../constants/restartFlag.js';
-import tryUntilSuccess from '../utils/tryUntilSuccess.js';
+import tryUntilSuccess from '../functions/tryUntilSuccess.js';
 
 const Restart = {
   async getFlag() {
