@@ -7,6 +7,10 @@ const OutputView = {
     Console.print(message);
   },
 
+  printStart() {
+    Console.print(OUTPUT.start);
+  },
+
   printHint(strike, ball) {
     this.handleNothing(strike, ball);
     this.handleBall(strike, ball);

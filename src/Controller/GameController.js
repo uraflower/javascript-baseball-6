@@ -12,6 +12,8 @@ class GameController {
   #user;
 
   async repeatPlay() {
+    OutputView.printStart();
+
     let flag = RESTART_FLAG.restart;
     while (flag === RESTART_FLAG.restart) {
       await this.play();
