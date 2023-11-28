@@ -11,6 +11,10 @@ const OutputView = {
     Console.print(OUTPUT.start);
   },
 
+  printEnd() {
+    Console.print(OUTPUT.end);
+  },
+
   printHint(strike, ball) {
     this.handleNothing(strike, ball);
     this.handleBall(strike, ball);

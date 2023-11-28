@@ -25,8 +25,7 @@ class GameController {
     this.#computer = generateUniqueRandomNumber();
 
     await this.#repeatGuess();
-    // 게임 종료 메시지 출력
-    // ...
+    OutputView.printEnd();
   }
 
   async #repeatGuess() {
