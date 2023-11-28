@@ -9,7 +9,9 @@ function isDuplicated(str) {
 }
 
 function isNotInRange(str, min, max) {
-  const result = [...str].find((num) => Number(num) < min || Number(num) > max);
+  const result = Array.from(str).find(
+    (num) => Number(num) < min || Number(num) > max,
+  );
   return result !== undefined;
 }
 
