@@ -7,6 +7,7 @@ import {
   isDuplicated,
   isInvalidLength,
   isNotInRange,
+  isInteger,
 } from '../utils/validate.js';
 
 const User = {
@@ -17,6 +18,7 @@ const User = {
 
   validate(number) {
     if (
+      !isInteger(number) ||
       isDuplicated(number) ||
       isInvalidLength(number) ||
       isNotInRange(number, RANGE.min, RANGE.max)

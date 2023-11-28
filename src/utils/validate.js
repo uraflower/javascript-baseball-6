@@ -15,4 +15,9 @@ function isNotInRange(str, min, max) {
   return result !== undefined;
 }
 
-export { isDuplicated, isInvalidLength, isNotInRange };
+function isInteger(numbers) {
+  const INTEGER_PATTERN = /^\d$/;
+  return Array.from(numbers).every((num) => INTEGER_PATTERN.test(num));
+}
+
+export { isDuplicated, isInvalidLength, isNotInRange, isInteger };
