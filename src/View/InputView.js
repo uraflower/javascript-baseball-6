@@ -6,6 +6,11 @@ const InputView = {
     const numbers = await Console.readLineAsync(INPUT.number);
     return numbers;
   },
+
+  async inputRestartFlag() {
+    const flag = await Console.readLineAsync(INPUT.restart);
+    return flag;
+  },
 };
 
 Object.freeze(InputView);
