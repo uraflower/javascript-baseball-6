@@ -24,7 +24,9 @@ const User = {
     }
   },
 
-  formatNumber() {},
+  formatNumber(number) {
+    return [...number].map((num) => Number(num));
+  },
 };
 
 Object.freeze(User);
