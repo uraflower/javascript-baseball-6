@@ -2,7 +2,11 @@ import CustomError from '../Error/CustomError.js';
 import InputView from '../View/InputView.js';
 import ERROR from '../constants/messages/error.js';
 import tryUntilSuccess from '../utils/tryUntilSuccess.js';
-import isInvalidNumber from '../utils/validateNumber.js';
+import {
+  isDuplicated,
+  isInvalidLength,
+  isNotInRange,
+} from '../utils/validateNumber.js';
 
 const User = {
   async getNumber() {
@@ -11,7 +15,11 @@ const User = {
   },
 
   validate(number) {
-    if (isInvalidNumber(number)) {
+    if (
+      isDuplicated(number) ||
+      isInvalidLength(number) ||
+      isNotInRange(number)
+    ) {
       throw new CustomError(ERROR.invalidNumber);
     }
   },

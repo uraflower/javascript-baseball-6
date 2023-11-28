@@ -15,10 +15,4 @@ function isNotInRange(str) {
   return result !== undefined;
 }
 
-function isInvalidNumber(number) {
-  return (
-    isDuplicated(number) || isInvalidLength(number) || isNotInRange(number)
-  );
-}
-
-export default isInvalidNumber;
+export { isDuplicated, isInvalidLength, isNotInRange };
