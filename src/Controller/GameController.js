@@ -1,4 +1,4 @@
-import User from '../Domain/User.js';
+import User from '../InputHandler.js/User.js';
 import getHint from '../Domain/getHint.js';
 import OutputView from '../View/outputView.js';
 import { DIGIT } from '../constants/randomNumber.js';
