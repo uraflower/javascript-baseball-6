@@ -8,7 +8,7 @@ class App {
   }
 
   async play() {
-    await this.#gameController.play();
+    await this.#gameController.repeatPlay();
   }
 }
 
