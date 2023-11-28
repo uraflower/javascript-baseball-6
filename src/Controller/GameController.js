@@ -1,5 +1,6 @@
 import User from '../Domain/User.js';
 import getHint from '../Domain/getHint.js';
+import OutputView from '../View/outputView.js';
 import { DIGIT } from '../constants/randomNumber.js';
 import generateUniqueRandomNumber from '../utils/generateUniqueRandomNumber.js';
 
@@ -26,7 +27,7 @@ class GameController {
   async #guess() {
     this.#user = await User.getNumber();
     const [strike, ball] = getHint(this.#computer, this.#user);
-    // 결과 출력
+    OutputView.printHint(strike, ball);
     return strike === DIGIT;
   }
 }
