@@ -3,11 +3,21 @@ import getHint from '../Domain/getHint.js';
 import OutputView from '../View/outputView.js';
 import { DIGIT } from '../constants/randomNumber.js';
 import generateUniqueRandomNumber from '../utils/generateUniqueRandomNumber.js';
+import Restart from '../InputHandler.js/Restart.js';
+import RESTART_FLAG from '../constants/restartFlag.js';
 
 class GameController {
   #computer;
 
   #user;
+
+  async repeatPlay() {
+    let flag = RESTART_FLAG.restart;
+    while (flag === RESTART_FLAG.restart) {
+      await this.play();
+      flag = await Restart.getFlag();
+    }
+  }
 
   async play() {
     this.#computer = generateUniqueRandomNumber();
