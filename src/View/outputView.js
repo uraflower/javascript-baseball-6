@@ -1,5 +1,6 @@
 import { Console } from '@woowacourse/mission-utils';
 import OUTPUT from '../constants/messages/output.js';
+import COMMON from '../constants/common.js';
 
 const OutputView = {
   printError(message) {
@@ -33,7 +34,13 @@ const OutputView = {
 
   handleStrikeAndBall(strike, ball) {
     if (strike !== 0 && ball !== 0) {
-      Console.print(ball + OUTPUT.hint.ball + strike + OUTPUT.hint.strike);
+      Console.print(
+        ball +
+          OUTPUT.hint.ball +
+          COMMON.whiteSpace +
+          strike +
+          OUTPUT.hint.strike,
+      );
     }
   },
 };
