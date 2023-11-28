@@ -28,9 +28,9 @@ class GameController {
   }
 
   async #repeatGuess() {
-    let isDone = false;
-    while (!isDone) {
-      isDone = await this.#guess();
+    let isHitAnswer = false;
+    while (!isHitAnswer) {
+      isHitAnswer = await this.#guess();
     }
   }
 
